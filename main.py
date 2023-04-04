@@ -18,7 +18,7 @@ def browsefunc(ent):
         ("image", ".jpg"),
     ]))
     ent.delete(0, tk.END)
-    ent.insert(tk.END, filename)  # add this
+    ent.insert(tk.END, filename)  
 
 
 def capture_image_from_cam_into_temp(sign=1):
@@ -26,7 +26,7 @@ def capture_image_from_cam_into_temp(sign=1):
 
     cv2.namedWindow("test")
 
-    # img_counter = 0
+    
 
     while True:
         ret, frame = cam.read()
@@ -43,8 +43,8 @@ def capture_image_from_cam_into_temp(sign=1):
         elif k % 256 == 32:
             # SPACE pressed
             if not os.path.isdir('temp'):
-                os.mkdir('temp', mode=0o777)  # make sure the directory exists
-            # img_name = "./temp/opencv_frame_{}.png".format(img_counter)
+                os.mkdir('temp', mode=0o777)  
+            
             if(sign == 1):
                 img_name = "./temp/test_img1.png"
             else:
@@ -57,13 +57,12 @@ def capture_image_from_cam_into_temp(sign=1):
     return True
 
 
-def captureImage(ent, sign=1):   # ent = Entry box for image
+def captureImage(ent, sign=1):   
     if(sign == 1):
         filename = os.getcwd()+'\\temp\\test_img1.png'
     else:
         filename = os.getcwd()+'\\temp\\test_img2.png'
-    # messagebox.showinfo(
-    #     'SUCCESS!!!', 'Press Space Bar to click picture and ESC to exit')
+    
     res = None
     res = messagebox.askquestion(
         'Click Picture', 'Press Space Bar to click picture and ESC to exit')
@@ -86,11 +85,13 @@ def checkSimilarity(window, path1, path2):
     return True
 
 
-root = tk.Tk()  # starts User Interface
+
+# User interface code
+root = tk.Tk()  
 root.title("Signature Matching")
-root.geometry("500x700")  # 300x200
-uname_label = tk.Label(root, text="Automated Signature Processing:", font=10)
-uname_label.place(x=90, y=50)  # static Positioning
+root.geometry("500x700")  
+uname_label = tk.Label(root, text="Automated Cheque Signature Processing:", font=10)
+uname_label.place(x=90, y=50)  
 
 img1_message = tk.Label(root, text="Signature 1", font=10)
 img1_message.place(x=10, y=120)
