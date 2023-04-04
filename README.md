@@ -20,6 +20,8 @@ Then capture or Browse images to be compared by pressing compare button.
 
 
 4. for checking percentage of matching exit to the photos windows. 
+
+
 ![sign2](https://user-images.githubusercontent.com/88238469/229874637-488ec5e9-fe41-47e5-bab7-0a2b74d38998.PNG)
 
 
