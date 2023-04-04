@@ -9,6 +9,8 @@ This is an cheque matching interface of two sign how much identical with the Thr
 1. In terminal first type "pip install requirements.txt".
 2. then write "python main.py" press enter
 3. This type of Interface shows 
+
+
 ![sign_](https://user-images.githubusercontent.com/88238469/229874501-b7a30a6a-b733-454f-aba4-5598d6f05227.PNG)
 
 
